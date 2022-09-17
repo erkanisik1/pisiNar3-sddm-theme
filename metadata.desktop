@@ -1,0 +1,16 @@
+[SddmGreeterTheme]
+Name=Pisi Nar 3
+Description=SDDM theme for Pisi Linux
+Author=erkanisik
+Copyright=Copyright (C) 2022 Erkan IŞIK
+License=GPL-3.0-or-later
+Type=sddm-theme
+Version=1.0
+Website=https://www.pisilinux.org
+Screenshot=Preview.jpg
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=erkanisik@pisilinux.org
+Theme-Id=pisi-nar-3
+Theme-API=2.11

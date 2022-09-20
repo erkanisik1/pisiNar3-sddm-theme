@@ -170,7 +170,7 @@ Column {
             anchors.centerIn: parent
             height: root.font.pointSize * 3
             width: parent.width
-            placeholderText: config.TranslatePlaceholderUsername || textConstants.userName
+            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
             selectByMouse: true
             horizontalAlignment: TextInput.AlignHCenter
             renderType: Text.QtRendering
@@ -216,7 +216,7 @@ Column {
             focus: config.ForcePasswordFocus == "true" ? true : false
             selectByMouse: true
             echoMode: revealSecret.checked ? TextInput.Normal : TextInput.Password
-            placeholderText: config.TranslatePlaceholderPassword || textConstants.password
+            placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Password")
             horizontalAlignment: TextInput.AlignHCenter
             passwordCharacter: "•"
             passwordMaskDelay: config.ForceHideCompletePassword == "true" ? undefined : 1000
@@ -290,7 +290,8 @@ Column {
 
             contentItem: Text {
                 id: indicatorLabel
-                text: config.TranslateShowPassword || "Show Password"
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Show Password")
+                //text: config.TranslateShowPassword || "Show Password"
                 anchors.verticalCenter: indicator.verticalCenter
                 horizontalAlignment: Text.AlignLeft
                 anchors.left: indicator.right
@@ -440,7 +441,7 @@ Column {
         Button {
             id: loginButton
             anchors.horizontalCenter: parent.horizontalCenter
-            text: config.TranslateLogin || textConstants.login
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
             height: root.font.pointSize * 3
             implicitWidth: parent.width
             enabled: username.text != "" && password.text != "" ? true : false

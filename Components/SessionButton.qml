@@ -21,6 +21,11 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 import QtGraphicalEffects 1.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+
+
+
 Item {
     id: sessionButton
     height: root.font.pointSize
@@ -63,13 +68,18 @@ Item {
 
         contentItem: Text {
             id: displayedItem
-            text: (config.TranslateSession || (textConstantSession + ":")) + " " + selectSession.currentText
+            text:  i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
+            //text: (config.TranslateSession || (textConstantSession + ":")) + " " + selectSession.currentText
             color: root.palette.text
             verticalAlignment: Text.AlignVCenter
             anchors.left: parent.left
             anchors.leftMargin: 3
             font.pointSize: root.font.pointSize * 0.8
+
+            
         }
+
+        
 
         background: Rectangle {
             color: "transparent"

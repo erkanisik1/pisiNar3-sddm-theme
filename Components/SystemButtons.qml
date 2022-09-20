@@ -25,11 +25,10 @@ RowLayout {
 
     spacing: root.font.pointSize
 
-    property var suspend: ["Suspend", config.TranslateSuspend || textConstants.suspend, sddm.canSuspend]
-    property var hibernate: ["Hibernate", config.TranslateHibernate || textConstants.hibernate, sddm.canHibernate]
-    property var reboot: ["Reboot", config.TranslateReboot || textConstants.reboot, sddm.canReboot]
-    property var shutdown: ["Shutdown", config.TranslateShutdown || textConstants.shutdown, sddm.canPowerOff]
-
+    property var suspend: ["Suspend", config.TranslateSuspend || i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep"), sddm.canSuspend]
+    property var hibernate: ["Hibernate", config.TranslateHibernate || i18nd("plasma_lookandfeel_org.kde.lookandfeel","Hibernate"), sddm.canHibernate]
+    property var reboot: ["Reboot", config.TranslateReboot ||  i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart"), sddm.canReboot]
+    property var shutdown: ["Shutdown", config.TranslateShutdown || i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down"), sddm.canPowerOff]
     property Control exposedLogin
 
     Repeater {

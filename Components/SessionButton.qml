@@ -68,7 +68,7 @@ Item {
 
         contentItem: Text {
             id: displayedItem
-            text:  i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
+            text:  i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Session: %1", selectSession.currentText)
             //text: (config.TranslateSession || (textConstantSession + ":")) + " " + selectSession.currentText
             color: root.palette.text
             verticalAlignment: Text.AlignVCenter
